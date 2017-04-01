@@ -1,0 +1,29 @@
+~~~~~ On RPi ~~~~~
+to setup the OS and
+- install NOOBS with Raspbian OS
+- connect to ethernet
+- run terminal
+- run "ifconfig" that we will call [ip]
+- find eth0 "inet addr: __________"
+- run "sudo -i" (set admin priv)
+- run "apt-get update"
+- enable ssh from "Preferences -> Raspberry Pi Configuration"
+- run "reboot"
+
+to setup bluetooth (working on this)
+- make bluetooth discoverable
+- pair
+
+~~~~~ On BASH ~~~~~
+to test that you can ssh
+- run "ssh pi@[ip]" using the ip we found earlier
+- password should be "raspberry" if you didn't change it in the prefs.
+
+to make it so you dont have to enter a password every time when using ssh
+- run "ssh-keygen -t rsa"
+- keep pressing enter until through
+- run "ssh-copy-id -i /home/[username_of_pc]/.ssh/id_rsa.pub pi@[ip]"
+- ssh into the computer to test
+
+to run local python on the raspberry pi machine
+- run "cat [localfilename.py] | ssh pi@[ip] python -"
