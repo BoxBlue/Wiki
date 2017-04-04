@@ -24,6 +24,10 @@ to make it so you dont have to enter a password every time when using ssh
 - keep pressing enter until through
 - run "ssh-copy-id -i /home/[username_of_pc]/.ssh/id_rsa.pub pi@[ip]"
 - ssh into the computer to test
+- run "exit" to stop using ssh
 
 to run local python on the raspberry pi machine
 - run "cat [localfilename.py] | ssh pi@[ip] python -"
+
+~~~~~ Bluetooth for Python ~~~~~
+run "sudo apt-get install python-bluez"
